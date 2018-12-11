@@ -1,9 +1,7 @@
 package fr.technomage.controleur;
 
-import javax.swing.JPanel;
-
 import fr.technomage.vue.Vue;
-import fr.technomage.vue.VueMenuPrincipal;
+import fr.technomage.vue.panel.VueMenuPrincipal;
 
 public class Controleur {
 

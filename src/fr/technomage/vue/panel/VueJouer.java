@@ -1,4 +1,4 @@
-package fr.technomage.vue;
+package fr.technomage.vue.panel;
 
 import java.awt.Component;
 
