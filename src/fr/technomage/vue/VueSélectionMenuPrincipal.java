@@ -11,9 +11,10 @@ import javax.swing.JPanel;
 
 import fr.technomage.controleur.action.ActionMenuPrincipal;
 import fr.technomage.objet.swing.Bouton;
+import fr.technomage.objet.swing.Panel;
 
 @SuppressWarnings("serial")
-public class VueSélectionMenuPrincipal extends JPanel {
+public class VueSélectionMenuPrincipal extends Panel {
 
 	private JLabel jlTitre;
 	private Bouton jbJouer;
