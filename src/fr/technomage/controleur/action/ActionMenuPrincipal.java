@@ -4,8 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import fr.technomage.vue.Vue;
-import fr.technomage.vue.panel.VueCreerPerso;
-import fr.technomage.vue.panel.VueJouer;
+import fr.technomage.vue.panel.PanelCreerPerso;
+import fr.technomage.vue.panel.PanelJouer;
 
 
 public class ActionMenuPrincipal implements ActionListener {
@@ -23,11 +23,11 @@ public class ActionMenuPrincipal implements ActionListener {
 		switch(this.code) {
 		case "Jouer":
 			this.vue.getContentPane().removeAll();
-			this.vue.getContentPane().add(new VueJouer()).revalidate();
+			this.vue.getContentPane().add(new PanelJouer()).revalidate();
 			break;
 		case "NouveauJoueur":
 			this.vue.getContentPane().removeAll();
-			this.vue.getContentPane().add(new VueCreerPerso(vue)).revalidate();
+			this.vue.getContentPane().add(new PanelCreerPerso(vue)).revalidate();
 			break;
 		}
 		
