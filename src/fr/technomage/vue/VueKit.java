@@ -1,8 +1,10 @@
 package fr.technomage.vue;
 
 import java.awt.*;
+
 import javax.swing.*;
 
+@SuppressWarnings("serial")
 public class VueKit extends JPanel{
 
 	/* ATTRIBUTS PRIVEE */
@@ -22,14 +24,14 @@ public class VueKit extends JPanel{
 		this.vue = uneVue;
 		
 		//Police
-		Font font = new Font("Calibri", Font.BOLD,20);
+		Font font = new Font("Calibri", Font.BOLD, 20);
 		
 		//Instanciatio du label
 		this.lblKit = new JLabel("KIT");
 		this.lblKit.setFont(font);
 		
 		//Instanciation du JComboBox (Remplacer ce qu'il y a dans les paranthèses)
-		this.lstKit = new JComboBox(/*Modele.getLesMois()*/);
+		this.lstKit = new JComboBox<String>();
 		
 		/* AJOUT DANS LE PANEL */
 		

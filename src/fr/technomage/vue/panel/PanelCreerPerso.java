@@ -1,6 +1,7 @@
 package fr.technomage.vue.panel;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 
 import javax.swing.JPanel;
@@ -27,10 +28,12 @@ public class PanelCreerPerso extends Panel {
 		
 		//Pour pouvoir récupérer les vues créer au paravant on fait appel a leur constructeur propre. 
 		this.vueStat = new VueStat(this.vue);
-		this.vueStat.setBounds(200, 200, 50, 100);
+		this.vueStat.setBounds(400, 200, 900, 200);
 		
 		this.vueKit = new VueKit(this.vue);
-		this.vueKit.setBounds(400, 400, 50, 50);
+		Dimension size = this.vueKit.getPreferredSize();
+		
+		this.vueKit.setBounds(100, 450, 300, 400);
 		
 		this.add(this.vueStat);
 		this.add(this.vueKit);
@@ -38,8 +41,6 @@ public class PanelCreerPerso extends Panel {
 	
 	public void paint(Graphics g) {
 		super.paint(g);
-		g.setColor(Color.MAGENTA);
-		g.fillRect(this.getWidth()-60, 10, 50, 50);
 	}
 	
 
