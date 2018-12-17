@@ -5,7 +5,7 @@ import java.awt.*;
 import javax.swing.*;
 
 @SuppressWarnings("serial")
-public class VueKit extends JPanel{
+public class VueKit extends Panel{
 
 	/* ATTRIBUTS PRIVEE */
 	private JLabel lblKit;

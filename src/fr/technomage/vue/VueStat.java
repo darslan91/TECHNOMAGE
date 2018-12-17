@@ -3,7 +3,7 @@ package fr.technomage.vue;
 import java.awt.*;
 import javax.swing.*;
 
-public class VueStat extends JPanel{
+public class VueStat extends Panel{
 
 	/* ATTRIBUTS PRIVES */
 	private Vue vue;

@@ -14,7 +14,7 @@ public class Panel extends JPanel {
 	
 	public void paint(Graphics g) {
 		super.paint(g);
-		grid(g);
+		//grid(g);
 	}
 	
 	public void grid(Graphics g) {

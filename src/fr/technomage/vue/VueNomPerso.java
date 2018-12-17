@@ -5,7 +5,9 @@ import java.awt.GridBagLayout;
 
 import javax.swing.*;
 
-public class VueNomPerso extends JPanel{
+import fr.technomage.objet.swing.Panel;
+
+public class VueNomPerso extends Panel{
 
 	/*ATTRIBUTS PRIVES */
 	private JLabel lblArme;
