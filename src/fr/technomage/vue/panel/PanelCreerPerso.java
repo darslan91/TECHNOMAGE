@@ -6,14 +6,14 @@ import java.awt.Graphics;
 
 import javax.swing.JPanel;
 
-import fr.technomage.objet.swing.Panel;
+import fr.technomage.objet.swing.TPanel;
 import fr.technomage.vue.Vue;
 import fr.technomage.vue.VueKit;
 import fr.technomage.vue.VueNomPerso;
 import fr.technomage.vue.VueStat;
 
 @SuppressWarnings("serial")
-public class PanelCreerPerso extends Panel {
+public class PanelCreerPerso extends TPanel {
 	
 	/* ATTRIBUTS PRIVEE */
 	private VueKit vueKit;

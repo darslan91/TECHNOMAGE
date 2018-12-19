@@ -1,14 +1,20 @@
 package fr.technomage.vue;
 
-import java.awt.*;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 
-import javax.swing.*;
+import javax.swing.JComboBox;
+
+import fr.technomage.objet.swing.Label;
+import fr.technomage.objet.swing.TPanel;
+
 
 @SuppressWarnings("serial")
-public class VueKit extends Panel{
+public class VueKit extends TPanel{
 
 	/* ATTRIBUTS PRIVEE */
-	private JLabel lblKit;
+	private Label lblKit;
 	private JComboBox<String> lstKit;
 	private Vue vue;
 	
@@ -27,7 +33,7 @@ public class VueKit extends Panel{
 		Font font = new Font("Calibri", Font.BOLD, 20);
 		
 		//Instanciatio du label
-		this.lblKit = new JLabel("KIT");
+		this.lblKit = new Label("KIT");
 		this.lblKit.setFont(font);
 		
 		//Instanciation du JComboBox (Remplacer ce qu'il y a dans les paranthèses)

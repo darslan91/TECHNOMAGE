@@ -2,17 +2,19 @@ package fr.technomage.vue;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.Insets;
 
 import javax.swing.*;
 
-import fr.technomage.objet.swing.Panel;
+import fr.technomage.objet.swing.Label;
+import fr.technomage.objet.swing.TPanel;
 
-public class VueNomPerso extends Panel{
+public class VueNomPerso extends TPanel{
 
 	/*ATTRIBUTS PRIVES */
-	private JLabel lblArme;
-	private JLabel lblClasse;
-	private JLabel lblNom;
+	private Label lblArme;
+	private Label lblClasse;
+	private Label lblNom;
 	private JTextField jtfNom;
 	private Vue vue;
 	private JComboBox<String> lstArmes;
@@ -26,9 +28,9 @@ public class VueNomPerso extends Panel{
 		this.setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
 		
-		this.lblArme = new JLabel("Arme");
-		this.lblClasse = new JLabel("Classe");
-		this.lblNom = new JLabel("Nom du personnage");
+		this.lblArme = new Label("Arme");
+		this.lblClasse = new Label("Classe");
+		this.lblNom = new Label("Nom du personnage");
 		
 		this.lstArmes = new JComboBox(/*Modele.getLesMois()*/);
 		this.lstClasses = new JComboBox(/*Modele.getLesMois()*/);
@@ -38,6 +40,7 @@ public class VueNomPerso extends Panel{
 		/* AJOUT AU PANEL */
 		
 			//Le nom
+		c.insets = new Insets(5, 5, 5, 5);
 		c.gridx = 0;
 		c.gridy = 0;
 		this.add(lblNom, c);
@@ -45,6 +48,7 @@ public class VueNomPerso extends Panel{
 			//Le jtfNom
 		c.gridx = 0;
 		c.gridy = 1;
+		c.fill = GridBagConstraints.BOTH;
 		this.add(jtfNom, c);
 		
 			//text Les armes

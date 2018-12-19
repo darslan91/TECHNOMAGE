@@ -5,9 +5,9 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
-public class Panel extends JPanel {
+public class TPanel extends JPanel {
 
-	public Panel() {
+	public TPanel() {
 		this.setBackground(new Color(40, 40, 40));
 		this.setLayout(null);
 	}

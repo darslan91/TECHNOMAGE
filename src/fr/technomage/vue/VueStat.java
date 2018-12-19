@@ -1,13 +1,20 @@
 package fr.technomage.vue;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 
-public class VueStat extends Panel{
+import fr.technomage.objet.swing.Label;
+import fr.technomage.objet.swing.TPanel;
+
+
+
+@SuppressWarnings("serial")
+public class VueStat extends TPanel{
 
 	/* ATTRIBUTS PRIVES */
 	private Vue vue;
-	private JLabel lblStat;
+	private Label lblStat;
 	
 	
 	/* CONSTRUCTEUR */
@@ -24,7 +31,7 @@ public class VueStat extends Panel{
 		Font font = new Font("Calibri", Font.BOLD,20);
 		
 		//Instanciation du label stat
-		this.lblStat = new JLabel("STAT");
+		this.lblStat = new Label("STAT");
 		this.lblStat.setFont(font);
 		
 		/* AJOUT AU PANEL */
