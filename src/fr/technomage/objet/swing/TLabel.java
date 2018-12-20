@@ -5,8 +5,8 @@ import java.awt.Color;
 import javax.swing.JLabel;
 
 @SuppressWarnings("serial")
-public class Label extends JLabel {
-	public Label(String text) {
+public class TLabel extends JLabel {
+	public TLabel(String text) {
 		super(text);
 		this.setForeground(Color.lightGray);
 	}

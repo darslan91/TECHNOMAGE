@@ -4,17 +4,19 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
-import fr.technomage.objet.swing.Label;
+import javax.swing.JPanel;
+
+import fr.technomage.objet.swing.TLabel;
 import fr.technomage.objet.swing.TPanel;
 
 
 
 @SuppressWarnings("serial")
-public class VueStat extends TPanel{
+public class VueStat extends JPanel{
 
 	/* ATTRIBUTS PRIVES */
 	private Vue vue;
-	private Label lblStat;
+	private TLabel lblStat;
 	
 	
 	/* CONSTRUCTEUR */
@@ -31,7 +33,7 @@ public class VueStat extends TPanel{
 		Font font = new Font("Calibri", Font.BOLD,20);
 		
 		//Instanciation du label stat
-		this.lblStat = new Label("STAT");
+		this.lblStat = new TLabel("STAT");
 		this.lblStat.setFont(font);
 		
 		/* AJOUT AU PANEL */

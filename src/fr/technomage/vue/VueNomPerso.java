@@ -6,15 +6,15 @@ import java.awt.Insets;
 
 import javax.swing.*;
 
-import fr.technomage.objet.swing.Label;
+import fr.technomage.objet.swing.TLabel;
 import fr.technomage.objet.swing.TPanel;
 
-public class VueNomPerso extends TPanel{
+public class VueNomPerso extends JPanel{
 
 	/*ATTRIBUTS PRIVES */
-	private Label lblArme;
-	private Label lblClasse;
-	private Label lblNom;
+	private TLabel lblArme;
+	private TLabel lblClasse;
+	private TLabel lblNom;
 	private JTextField jtfNom;
 	private Vue vue;
 	private JComboBox<String> lstArmes;
@@ -28,12 +28,12 @@ public class VueNomPerso extends TPanel{
 		this.setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
 		
-		this.lblArme = new Label("Arme");
-		this.lblClasse = new Label("Classe");
-		this.lblNom = new Label("Nom du personnage");
+		this.lblArme = new TLabel("Arme");
+		this.lblClasse = new TLabel("Classe");
+		this.lblNom = new TLabel("Nom du personnage");
 		
-		this.lstArmes = new JComboBox(/*Modele.getLesMois()*/);
-		this.lstClasses = new JComboBox(/*Modele.getLesMois()*/);
+		this.lstArmes = new JComboBox<String>(/*Modele.getLesMois()*/);
+		this.lstClasses = new JComboBox<String>(/*Modele.getLesMois()*/);
 		
 		this.jtfNom = new JTextField();
 		
@@ -43,32 +43,29 @@ public class VueNomPerso extends TPanel{
 		c.insets = new Insets(5, 5, 5, 5);
 		c.gridx = 0;
 		c.gridy = 0;
+		c.gridwidth = 4;
 		this.add(lblNom, c);
-		
 			//Le jtfNom
-		c.gridx = 0;
-		c.gridy = 1;
+		c.gridy++;
 		c.fill = GridBagConstraints.BOTH;
 		this.add(jtfNom, c);
 		
 			//text Les armes
-		c.gridx = 1;
-		c.gridy = 1;
+		c.gridy++;
+		c.gridx = 0;
+		c.gridwidth = 1;
 		this.add(lblArme, c);
 		
+			//JComboBox lstArmes
+		c.gridx++;
+		this.add(lstArmes, c);
+		
 			//text Les Classes
-		c.gridx = 1;
-		c.gridy = 2;
+		c.gridx++;
 		this.add(lblClasse, c);
 		
 			//JComboBox lstArmes
-		c.gridx = 2;
-		c.gridy = 1;
-		this.add(lstArmes, c);
-		
-			//JComboBox lstArmes
-		c.gridx = 2;
-		c.gridy = 2;
+		c.gridx++;
 		this.add(lstClasses, c);
 		
 			

@@ -5,16 +5,17 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
 import javax.swing.JComboBox;
+import javax.swing.JPanel;
 
-import fr.technomage.objet.swing.Label;
+import fr.technomage.objet.swing.TLabel;
 import fr.technomage.objet.swing.TPanel;
 
 
 @SuppressWarnings("serial")
-public class VueKit extends TPanel{
+public class VueKit extends JPanel{
 
 	/* ATTRIBUTS PRIVEE */
-	private Label lblKit;
+	private TLabel lblKit;
 	private JComboBox<String> lstKit;
 	private Vue vue;
 	
@@ -33,7 +34,7 @@ public class VueKit extends TPanel{
 		Font font = new Font("Calibri", Font.BOLD, 20);
 		
 		//Instanciatio du label
-		this.lblKit = new Label("KIT");
+		this.lblKit = new TLabel("KIT");
 		this.lblKit.setFont(font);
 		
 		//Instanciation du JComboBox (Remplacer ce qu'il y a dans les paranthèses)

@@ -2,13 +2,18 @@ package fr.technomage.objet.swing;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 
 import javax.swing.JButton;
 
-@SuppressWarnings("serial")
-public class Bouton extends JButton {
+import com.sun.glass.ui.Cursor;
 
-	public Bouton(String label) {
+@SuppressWarnings("serial")
+public class TBouton extends JButton {
+
+	public TBouton(String label) {
 		super(label);
 		
 		this.setOpaque(true);
@@ -17,7 +22,7 @@ public class Bouton extends JButton {
 		this.setForeground(Color.lightGray);
 	}
 	
-	public Bouton(String label, int width, int height) {
+	public TBouton(String label, int width, int height) {
 		this(label);
 		this.setPreferredSize(new Dimension(width, height));
 	}

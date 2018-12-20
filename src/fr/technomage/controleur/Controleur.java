@@ -1,7 +1,7 @@
 package fr.technomage.controleur;
 
 import fr.technomage.vue.Vue;
-import fr.technomage.vue.panel.VueMenuPrincipal;
+import fr.technomage.vue.MenuPrincipal.VueMenuPrincipal;
 
 public class Controleur {
 

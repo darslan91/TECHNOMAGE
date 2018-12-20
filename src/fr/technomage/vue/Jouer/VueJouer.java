@@ -1,4 +1,4 @@
-package fr.technomage.vue.panel;
+package fr.technomage.vue.Jouer;
 
 import java.awt.Component;
 
@@ -8,9 +8,9 @@ import javax.swing.JPanel;
 import fr.technomage.objet.swing.TPanel;
 
 @SuppressWarnings("serial")
-public class PanelJouer extends TPanel {
+public class VueJouer extends TPanel {
 
-	public PanelJouer() {
+	public VueJouer() {
 		this.add(new JLabel("JEUX"));
 	}
 	
