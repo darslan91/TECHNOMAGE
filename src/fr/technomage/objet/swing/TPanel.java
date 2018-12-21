@@ -15,6 +15,8 @@ public class TPanel extends JPanel {
 	public void paint(Graphics g) {
 		super.paint(g);
 		//grid(g);
+		g.setColor(Color.LIGHT_GRAY);
+		g.drawRect(-1, -1, this.getWidth()-1, this.getHeight()-1);
 	}
 	
 	public void grid(Graphics g) {

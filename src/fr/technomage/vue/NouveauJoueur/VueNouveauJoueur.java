@@ -1,4 +1,4 @@
-package fr.technomage.vue.panel;
+package fr.technomage.vue.NouveauJoueur;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -8,9 +8,6 @@ import javax.swing.JPanel;
 
 import fr.technomage.objet.swing.TPanel;
 import fr.technomage.vue.Vue;
-import fr.technomage.vue.VueKit;
-import fr.technomage.vue.VueNomPerso;
-import fr.technomage.vue.VueStat;
 
 @SuppressWarnings("serial")
 public class VueNouveauJoueur extends TPanel {
@@ -19,6 +16,7 @@ public class VueNouveauJoueur extends TPanel {
 	private VueKit vueKit;
 	private VueStat vueStat;
 	private VueNomPerso vueNomPerso;
+	private VueAvatar vueAvatar;
 	
 	
 	
@@ -35,10 +33,14 @@ public class VueNouveauJoueur extends TPanel {
 		this.vueKit = new VueKit(vue);
 		this.vueKit.setBounds(350, 400, 400, 400);
 		
+		this.vueAvatar = new VueAvatar(vue);
+		this.vueAvatar.setBounds(850, 400, 400, 400);
+		
 		
 		
 		this.add(this.vueStat);
 		this.add(this.vueKit);
+		this.add(this.vueAvatar);
 		this.add(this.vueNomPerso);
 	}
 	

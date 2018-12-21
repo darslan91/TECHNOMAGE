@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 import fr.technomage.vue.Vue;
 import fr.technomage.vue.Jouer.VueJouer;
-import fr.technomage.vue.panel.VueNouveauJoueur;
+import fr.technomage.vue.NouveauJoueur.VueNouveauJoueur;
 
 
 public class ActionMenuPrincipal implements ActionListener {
