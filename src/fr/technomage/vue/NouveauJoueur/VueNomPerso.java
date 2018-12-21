@@ -4,8 +4,6 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 
-import javax.swing.*;
-
 import fr.technomage.objet.swing.TComboBox;
 import fr.technomage.objet.swing.TLabel;
 import fr.technomage.objet.swing.TPanel;
@@ -20,14 +18,12 @@ public class VueNomPerso extends TPanel{
 	private TLabel lblClasse;
 	private TLabel lblNom;
 	private TTextField jtfNom;
-	private Vue vue;
 	private TComboBox lstArmes;
 	private TComboBox lstClasses;
 	
 	
 	/* CONSTRUCTEUR */
 	public VueNomPerso (Vue vue){
-		this.vue = vue;
 		
 		this.setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();

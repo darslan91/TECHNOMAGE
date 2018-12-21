@@ -4,9 +4,6 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
-import javax.swing.JComboBox;
-import javax.swing.JPanel;
-
 import fr.technomage.objet.swing.TComboBox;
 import fr.technomage.objet.swing.TLabel;
 import fr.technomage.objet.swing.TPanel;
@@ -19,7 +16,6 @@ public class VueKit extends TPanel{
 	/* ATTRIBUTS PRIVEE */
 	private TLabel lblKit;
 	private TComboBox lstKit;
-	private Vue vue;
 	
 	
 	/* CONSTRUCTEUR */
@@ -28,9 +24,6 @@ public class VueKit extends TPanel{
 		//Gestion du GridBag Layout
 		this.setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
-		
-		//Récupération de la vue
-		this.vue = uneVue;
 		
 		//Police
 		Font font = new Font("Calibri", Font.BOLD, 20);

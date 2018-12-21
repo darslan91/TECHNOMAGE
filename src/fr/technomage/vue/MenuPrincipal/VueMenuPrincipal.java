@@ -1,8 +1,5 @@
 package fr.technomage.vue.MenuPrincipal;
 
-import java.awt.Color;
-import java.awt.Graphics;
-
 import fr.technomage.objet.swing.TPanel;
 import fr.technomage.vue.Vue;
 

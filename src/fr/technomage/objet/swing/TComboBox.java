@@ -7,7 +7,6 @@ import java.awt.Point;
 import java.awt.Toolkit;
 
 import javax.swing.JComboBox;
-import javax.swing.JTextField;
 
 @SuppressWarnings("serial")
 public class TComboBox extends JComboBox<String> {

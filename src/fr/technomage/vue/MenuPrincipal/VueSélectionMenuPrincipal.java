@@ -1,12 +1,8 @@
 package fr.technomage.vue.MenuPrincipal;
 
-import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 import fr.technomage.controleur.action.ActionMenuPrincipal;
 import fr.technomage.objet.swing.TBouton;

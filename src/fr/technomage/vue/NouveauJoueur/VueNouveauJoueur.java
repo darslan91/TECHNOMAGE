@@ -1,10 +1,6 @@
 package fr.technomage.vue.NouveauJoueur;
 
-import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics;
-
-import javax.swing.JPanel;
 
 import fr.technomage.objet.swing.TPanel;
 import fr.technomage.vue.Vue;
