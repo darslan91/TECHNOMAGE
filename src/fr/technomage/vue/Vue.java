@@ -16,7 +16,7 @@ public class Vue extends JFrame{
 		this.setLocationRelativeTo(null);
 		this.setResizable(false);
 		Toolkit toolkit = Toolkit.getDefaultToolkit();
-		Image image = toolkit.getImage("assets/pictures/cursor/cursor.png");
+		Image image = toolkit.getImage("assets/cursor/cursor.png");
 		Cursor c = toolkit.createCustomCursor(image , new Point(0, 0), "img");
 		this.setCursor(c);
 	}
