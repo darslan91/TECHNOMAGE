@@ -1,11 +1,7 @@
-package fr.technomage.vue.panel;
-
-import java.awt.Color;
-import java.awt.Graphics;
+package fr.technomage.vue.MenuPrincipal;
 
 import fr.technomage.objet.swing.TPanel;
 import fr.technomage.vue.Vue;
-import fr.technomage.vue.VueSélectionMenuPrincipal;
 
 @SuppressWarnings("serial")
 public class VueMenuPrincipal extends TPanel {
@@ -17,7 +13,7 @@ public class VueMenuPrincipal extends TPanel {
 		
 		this.vueSélectionMenuPrincipal = new VueSélectionMenuPrincipal(vue);
 		
-		this.vueSélectionMenuPrincipal.setBounds((vue.getWidth()-400)/2, (vue.getHeight()-400)/2, 400, 400);
+		this.vueSélectionMenuPrincipal.setBounds(600, 250, 400, 400);
 		
 		this.add(this.vueSélectionMenuPrincipal);
 	}

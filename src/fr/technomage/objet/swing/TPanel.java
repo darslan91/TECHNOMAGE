@@ -15,10 +15,12 @@ public class TPanel extends JPanel {
 	public void paint(Graphics g) {
 		super.paint(g);
 		//grid(g);
+		g.setColor(Color.LIGHT_GRAY);
+		g.drawRect(-1, -1, this.getWidth()-1, this.getHeight()-1);
 	}
 	
 	public void grid(Graphics g) {
-		g.setColor(Color.GRAY);
+		g.setColor(Color.RED);
 		for(int j = 0; j < this.getHeight(); j+=50) {
 			for(int i = 0; i < this.getWidth(); i+=50) {
 				g.drawRect(i, j, i+50, j+50);
@@ -27,7 +29,7 @@ public class TPanel extends JPanel {
 		g.setColor(Color.RED);
 		for(int j = 0; j < this.getHeight(); j+=100) {
 			for(int i = 0; i < this.getWidth(); i+=100) {
-				g.drawRect(i, j, i+100, j+100);
+				//g.drawRect(i, j, i+100, j+100);
 			}
 		}
 	}
