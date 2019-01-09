@@ -1,26 +1,23 @@
 package fr.technomage.modele;
 
-import java.io.File;
-
-import org.dom4j.Document;
-import org.dom4j.DocumentException;
-import org.dom4j.io.SAXReader;
-
-
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 
 public class Modele {
-
-	public static final SAXReader saxReader = new SAXReader();
-
-	public static Document getXMLDocument(String path) {
-		Document xml = null;
+	public static Object getSerializedObject(String path) {
+		Object obj = null;
 		try {
-			File fileXML = new File(path);
-			xml = saxReader.read(fileXML);
-		} catch (DocumentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			FileInputStream fichier = new FileInputStream(path); 
+			ObjectInputStream s = new ObjectInputStream(fichier); 
+			obj  = s.readObject();
+		}  
+		catch (IOException e) { 
+			System.out.println(e);
 		}
-		return xml;
+		catch (ClassNotFoundException e) { 
+			System.out.println("Fichier non trouvé");
+		}
+		return obj;
 	}
 }

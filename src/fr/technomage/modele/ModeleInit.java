@@ -2,29 +2,23 @@ package fr.technomage.modele;
 
 import java.io.File;
 
-import org.dom4j.Document;
-import org.dom4j.Element;
-
-
+import fr.technomage.objet.Classe;
 
 public class ModeleInit {
-	
+
 	public ModeleInit() {
 		initLesClasses();
 	}
-	
-	public void initLesClasses() {
+
+	private void initLesClasses() {
 		String path = "assets\\classe\\";
 		File dossier = new File(path);
 		String[] files = dossier.list();
 		for(String file : files) {
-			if(file.matches(".*[.]xml$")){
-				Document xml = Modele.getXMLDocument(path + file);
-				Element classe = xml.getRootElement();
-				int force = Integer.parseInt(classe.element("Force").getText());
+			if(file.matches(".*[.]obj$")){
+				Classe classe = (Classe) Modele.getSerializedObject(path + file);
 			}
-			
-		
 		}
 	}
+
 }
