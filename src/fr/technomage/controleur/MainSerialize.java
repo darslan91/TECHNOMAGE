@@ -1,7 +1,12 @@
-import objet.Classe;
+package fr.technomage.controleur;
+
+import fr.technomage.modele.ModeleSerialize;
+import fr.technomage.objet.Classe;
 
 
-public class Main {
+
+
+public class MainSerialize {
 	public static void main(String[] args) {
 		Classe mage = new Classe("Mage", 4, 10, 4, 4, 6);
 		Classe invocateur = new Classe("Invocateur", 6, 6, 4, 5, 7);
@@ -12,17 +17,14 @@ public class Main {
 		Classe colosse = new Classe("Colosse", 6, 4, 6, 8, 4);
 		Classe paladin = new Classe("Paladin", 6, 4, 5, 7, 6);
 		
-		Modele.céréale(mage, mage.getNom());
-		Modele.céréale(invocateur, invocateur.getNom());
-		Modele.céréale(chasseur, chasseur.getNom());
-		Modele.céréale(assassin, assassin.getNom());
-		Modele.céréale(guerrier, guerrier.getNom());
-		Modele.céréale(berserker, berserker.getNom());
-		Modele.céréale(colosse, colosse.getNom());
-		Modele.céréale(paladin, paladin.getNom());
-		
-		
-		
+		ModeleSerialize.céréale(mage, mage.getNom());
+		ModeleSerialize.céréale(invocateur, invocateur.getNom());
+		ModeleSerialize.céréale(chasseur, chasseur.getNom());
+		ModeleSerialize.céréale(assassin, assassin.getNom());
+		ModeleSerialize.céréale(guerrier, guerrier.getNom());
+		ModeleSerialize.céréale(berserker, berserker.getNom());
+		ModeleSerialize.céréale(colosse, colosse.getNom());
+		ModeleSerialize.céréale(paladin, paladin.getNom());
 		
 		//Classe laclasse = (Classe) Modele.getCéréale("Mage");
 		//System.out.println(laclasse.getIntelligence());

@@ -11,8 +11,11 @@ import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import fr.technomage.objet.Game;
+
 @SuppressWarnings("serial")
 public class Vue extends JFrame{
+
 	public Vue() {
 		this.setTitle("Technomage");
 		this.setSize(1600, 900);

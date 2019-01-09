@@ -3,7 +3,10 @@ package fr.technomage.vue.NouveauJoueur;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 
+import fr.technomage.objet.Classe;
+import fr.technomage.objet.Game;
 import fr.technomage.objet.swing.TLabel;
 import fr.technomage.objet.swing.TPanel;
 import fr.technomage.vue.Vue;
@@ -14,29 +17,38 @@ import fr.technomage.vue.Vue;
 public class VueStat extends TPanel{
 
 	/* ATTRIBUTS PRIVES */
-	private TLabel lblStat;
+	
+	private TPanel panelGauche;
+	private TLabel lbForce;
+	private TLabel lbIntelligence;
+	private TLabel lbAgilité;
+	private TLabel lbConstitution;
+	private TLabel lbEsprit;
 	
 	
 	/* CONSTRUCTEUR */
-	public VueStat(Vue uneVue){
+	public VueStat(Vue vue, VueNouveauJoueur vueNouveauJoueur, int index){
 		
 		//Gestion du GridBag Layout
-		this.setLayout(new GridBagLayout());
-		GridBagConstraints c = new GridBagConstraints();
+		this.setLayout(new GridLayout(3, 2));
 		
-		//Déclaration et Instanciation d'un Label
-		Font font = new Font("Calibri", Font.BOLD,20);
+		Classe classe = Game.getUneClasseByIndex(index);
 		
 		//Instanciation du label stat
-		this.lblStat = new TLabel("STAT");
-		this.lblStat.setFont(font);
+		this.lbForce = new TLabel("Force : " + classe.getForce() );
+		this.lbIntelligence = new TLabel("Intelligence : " + classe.getIntelligence());
+		this.lbAgilité = new TLabel("Agilité : " + classe.getAgilité());
+		this.lbConstitution = new TLabel("Constitution : " + classe.getConstitution());
+		this.lbEsprit = new TLabel("Esprit : " + classe.getEsprit());
 		
 		/* AJOUT AU PANEL */
 		
-			//Label "STAT"
-		c.gridx = 0;
-		c.gridy = 0;
-		this.add(lblStat, c);
+		this.panelGauche = new TPanel();
+		this.panelGauche.add(lbForce);
+		this.panelGauche.add(lbIntelligence);
+		this.panelGauche.add(lbAgilité);
+		this.panelGauche.add(lbConstitution);
+		this.panelGauche.add(lbEsprit);
 		
 	}
 	

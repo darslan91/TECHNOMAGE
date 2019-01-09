@@ -19,7 +19,7 @@ public class VueKit extends TPanel{
 	
 	
 	/* CONSTRUCTEUR */
-	public VueKit (Vue uneVue){
+	public VueKit (Vue uneVue, VueNouveauJoueur vueNouveauJoueur){
 		
 		//Gestion du GridBag Layout
 		this.setLayout(new GridBagLayout());

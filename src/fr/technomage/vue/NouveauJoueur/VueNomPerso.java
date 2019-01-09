@@ -4,6 +4,7 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 
+import fr.technomage.controleur.action.ActionNouveauJoueur;
 import fr.technomage.objet.swing.TComboBox;
 import fr.technomage.objet.swing.TLabel;
 import fr.technomage.objet.swing.TPanel;
@@ -19,11 +20,10 @@ public class VueNomPerso extends TPanel{
 	private TLabel lblNom;
 	private TTextField jtfNom;
 	private TComboBox lstArmes;
-	private TComboBox lstClasses;
-	
-	
+	private TComboBox tcbClasses;
+
 	/* CONSTRUCTEUR */
-	public VueNomPerso (Vue vue){
+	public VueNomPerso (Vue vue, VueNouveauJoueur vueNouveauJoueur){
 		
 		this.setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
@@ -35,7 +35,8 @@ public class VueNomPerso extends TPanel{
 		String[] typeArmes = {"Épée & Bouclier", "Lance", "Arme test"};
 		this.lstArmes = new TComboBox(typeArmes);
 		String[] classes = {"Mage", "Guerrier", "ect"};
-		this.lstClasses = new TComboBox(classes);
+		this.tcbClasses = new TComboBox(classes);
+		this.tcbClasses.addActionListener(new ActionNouveauJoueur(vue, vueNouveauJoueur));
 		
 		this.jtfNom = new TTextField();
 		
@@ -66,11 +67,27 @@ public class VueNomPerso extends TPanel{
 		c.gridx++;
 		this.add(lblClasse, c);
 		
-			//JComboBox lstArmes
+			//JComboBox lssClasses
 		c.gridx++;
-		this.add(lstClasses, c);
+		this.add(tcbClasses, c);
 		
 			
+	}
+	
+	//Accesseur
+	
+	public TTextField getJtfNom() {
+		return jtfNom;
+	}
+
+
+	public TComboBox getLstArmes() {
+		return lstArmes;
+	}
+
+
+	public TComboBox getTcbClasses() {
+		return tcbClasses;
 	}
 	
 	

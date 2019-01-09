@@ -20,16 +20,16 @@ public class VueNouveauJoueur extends TPanel {
 	public VueNouveauJoueur (Vue vue){
 		
 		//Pour pouvoir récupérer les vues créer au paravant on fait appel a leur constructeur propre. 
-		this.vueNomPerso = new VueNomPerso(vue);
+		this.vueNomPerso = new VueNomPerso(vue, this);
 		this.vueNomPerso.setBounds(350, 50, 900, 100);
 		
-		this.vueStat = new VueStat(vue);
+		this.vueStat = new VueStat(vue, this, 0);
 		this.vueStat.setBounds(350, 200, 900, 150);
 		
-		this.vueKit = new VueKit(vue);
+		this.vueKit = new VueKit(vue, this);
 		this.vueKit.setBounds(350, 400, 400, 400);
 		
-		this.vueAvatar = new VueAvatar(vue);
+		this.vueAvatar = new VueAvatar(vue, this);
 		this.vueAvatar.setBounds(850, 400, 400, 400);
 		
 		
@@ -42,6 +42,22 @@ public class VueNouveauJoueur extends TPanel {
 	
 	public void paint(Graphics g) {
 		super.paint(g);
+	}
+
+	public VueKit getVueKit() {
+		return vueKit;
+	}
+
+	public VueStat getVueStat() {
+		return vueStat;
+	}
+
+	public VueNomPerso getVueNomPerso() {
+		return vueNomPerso;
+	}
+
+	public VueAvatar getVueAvatar() {
+		return vueAvatar;
 	}
 	
 
