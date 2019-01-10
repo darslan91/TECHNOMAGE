@@ -15,10 +15,20 @@ public class Game {
 	}
 	
 	public static void addUneClasse(Classe classe) {
-		Game.lesClasses.add(classe);
+		lesClasses.add(classe);
 	}
 	
 	public static Classe getUneClasseByIndex(int index) {
-		return Game.lesClasses.get(index);
+		return lesClasses.get(index);
+	}
+	
+	public static String[] getLesNomsDesClasses() {
+		String[] lesNoms = new String[lesClasses.size()];
+		int i = 0;
+		for(Classe classe : lesClasses) {
+			lesNoms[i] = classe.getNom();
+			i++;
+		}
+		return lesNoms;
 	}
 }

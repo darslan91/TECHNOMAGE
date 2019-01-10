@@ -18,10 +18,8 @@ public class ModeleInit {
 		File dossier = new File(path);
 		String[] files = dossier.list();
 		for(String file : files) {
-			System.out.println(file);
 			if(file.matches(".*[.]obj$")){
 				Classe classe = (Classe) Modele.getSerializedObject(path + file);
-				System.out.println(classe.getNom());
 				Game.addUneClasse(classe);
 			}
 		}

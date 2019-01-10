@@ -5,6 +5,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 
 import fr.technomage.controleur.action.ActionNouveauJoueur;
+import fr.technomage.objet.Game;
 import fr.technomage.objet.swing.TComboBox;
 import fr.technomage.objet.swing.TLabel;
 import fr.technomage.objet.swing.TPanel;
@@ -34,7 +35,7 @@ public class VueNomPerso extends TPanel{
 		
 		String[] typeArmes = {"Épée & Bouclier", "Lance", "Arme test"};
 		this.lstArmes = new TComboBox(typeArmes);
-		String[] classes = {"Mage", "Guerrier", "ect"};
+		String[] classes = Game.getLesNomsDesClasses();
 		this.tcbClasses = new TComboBox(classes);
 		this.tcbClasses.addActionListener(new ActionNouveauJoueur(vue, vueNouveauJoueur));
 		

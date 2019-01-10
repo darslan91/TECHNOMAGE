@@ -1,7 +1,6 @@
 package fr.technomage.controleur;
 
 import fr.technomage.modele.ModeleInit;
-import fr.technomage.objet.Game;
 import fr.technomage.vue.Vue;
 import fr.technomage.vue.MenuPrincipal.VueMenuPrincipal;
 

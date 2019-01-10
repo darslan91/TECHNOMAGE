@@ -16,7 +16,7 @@ public class TTextField extends JTextField {
 		this.setBackground(new Color(40, 40, 40));
 		this.setForeground(Color.lightGray);
 		Toolkit toolkit = Toolkit.getDefaultToolkit();
-		Image image = toolkit.getImage("assets/pictures/cursor/cursor_select.png");
+		Image image = toolkit.getImage("assets/cursor/cursor_select.png");
 		Cursor c = toolkit.createCustomCursor(image , new Point(0, 0), "img");
 		this.setCursor(c);
 	}
