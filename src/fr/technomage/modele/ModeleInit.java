@@ -3,8 +3,8 @@ package fr.technomage.modele;
 import java.io.File;
 import java.util.ArrayList;
 
-import fr.technomage.objet.Classe;
 import fr.technomage.objet.Game;
+import fr.technomage.objet.miscellaneous.Classe;
 
 public class ModeleInit {
 

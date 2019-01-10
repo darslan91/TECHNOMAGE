@@ -7,17 +7,22 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 public class TPanel extends JPanel {
 
-	public TPanel() {
+	private boolean isBordered;
+
+	public TPanel(boolean isBordered) {
 		this.setBackground(new Color(40, 40, 40));
 		this.setLayout(null);
+		this.isBordered = isBordered;
 	}
 	
 	public void paint(Graphics g) {
 		super.paint(g);
 		//grid(g);
 		g.setColor(Color.LIGHT_GRAY);
-		g.drawRect(0, 0, this.getWidth()-1, this.getHeight()-1);
-		g.drawRect(1, 1, this.getWidth()-3, this.getHeight()-3);
+		if(this.isBordered) {
+			g.drawRect(0, 0, this.getWidth()-1, this.getHeight()-1);
+			g.drawRect(1, 1, this.getWidth()-3, this.getHeight()-3);
+		}
 	}
 	
 	public void grid(Graphics g) {

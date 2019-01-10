@@ -1,4 +1,4 @@
-package fr.technomage.objet;
+package fr.technomage.objet.miscellaneous;
 
 import java.io.Serializable;
 

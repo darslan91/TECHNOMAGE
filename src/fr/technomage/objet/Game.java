@@ -2,6 +2,8 @@ package fr.technomage.objet;
 
 import java.util.ArrayList;
 
+import fr.technomage.objet.miscellaneous.Classe;
+
 public class Game {
 	
 	private static ArrayList<Classe> lesClasses;

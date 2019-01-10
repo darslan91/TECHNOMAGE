@@ -1,7 +1,7 @@
 package fr.technomage.controleur;
 
 import fr.technomage.modele.ModeleSerialize;
-import fr.technomage.objet.Classe;
+import fr.technomage.objet.miscellaneous.Classe;
 
 
 

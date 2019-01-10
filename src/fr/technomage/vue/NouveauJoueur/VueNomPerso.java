@@ -25,6 +25,7 @@ public class VueNomPerso extends TPanel{
 
 	/* CONSTRUCTEUR */
 	public VueNomPerso (Vue vue, VueNouveauJoueur vueNouveauJoueur){
+		super(true);
 		
 		this.setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
@@ -33,10 +34,10 @@ public class VueNomPerso extends TPanel{
 		this.lblClasse = new TLabel("Classe :");
 		this.lblNom = new TLabel("Nom du personnage");
 		
-		String[] typeArmes = {"Épée & Bouclier", "Lance", "Arme test"};
-		this.lstArmes = new TComboBox(typeArmes);
 		String[] classes = Game.getLesNomsDesClasses();
 		this.tcbClasses = new TComboBox(classes);
+		String[] typeArmes = {"Épée & Bouclier", "Lance", "Arme test"};
+		this.lstArmes = new TComboBox(typeArmes);
 		this.tcbClasses.addActionListener(new ActionNouveauJoueur(vue, vueNouveauJoueur));
 		
 		this.jtfNom = new TTextField();

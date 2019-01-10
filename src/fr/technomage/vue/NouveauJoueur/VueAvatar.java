@@ -19,6 +19,7 @@ public class VueAvatar extends TPanel{
 	
 	/* CONSTRUCTEUR */
 	public VueAvatar(Vue uneVue, VueNouveauJoueur vueNouveauJoueur){
+		super(true);
 		
 		//Gestion du GridBag Layout
 		this.setLayout(new GridBagLayout());

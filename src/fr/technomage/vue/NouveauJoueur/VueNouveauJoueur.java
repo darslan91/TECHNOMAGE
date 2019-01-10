@@ -22,6 +22,7 @@ public class VueNouveauJoueur extends TPanel {
 	
 	/* CONSTRUCTEUR */
 	public VueNouveauJoueur (Vue vue){
+		super(false);
 		
 		//Pour pouvoir récupérer les vues créer au paravant on fait appel a leur constructeur propre. 
 		this.vueNomPerso = new VueNomPerso(vue, this);

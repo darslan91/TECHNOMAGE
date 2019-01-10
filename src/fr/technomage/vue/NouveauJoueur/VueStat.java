@@ -6,8 +6,8 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 
-import fr.technomage.objet.Classe;
 import fr.technomage.objet.Game;
+import fr.technomage.objet.miscellaneous.Classe;
 import fr.technomage.objet.swing.TLabel;
 import fr.technomage.objet.swing.TPanel;
 import fr.technomage.vue.Vue;
@@ -41,6 +41,8 @@ public class VueStat extends TPanel{
 	/* CONSTRUCTEUR */
 	
 	public VueStat(Vue vue, VueNouveauJoueur vueNouveauJoueur){
+		super(true);
+		
 		Classe classe = Game.getUneClasseByIndex(0);
 		
 		this.setLayout(new BorderLayout());
@@ -64,7 +66,7 @@ public class VueStat extends TPanel{
 		this.lbEsprit = new TLabel("Esprit : " + esprit);
 		this.lbEsprit.setForeground(Color.PINK);
 		
-		this.panelGauche = new TPanel();
+		this.panelGauche = new TPanel(true);
 		
 		this.panelGauche.setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
@@ -95,7 +97,7 @@ public class VueStat extends TPanel{
 		
 		/* PANEL DROITE */
 		
-		this.panelDroite = new TPanel();
+		this.panelDroite = new TPanel(false);
 		
 		this.panelDroite.setLayout(new GridBagLayout());
 		c = new GridBagConstraints();

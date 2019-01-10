@@ -7,6 +7,7 @@ import fr.technomage.objet.swing.TPanel;
 public class VueJouer extends TPanel {
 
 	public VueJouer() {
+		super(false);
 		this.add(new TLabel("JEUX"));
 	}
 	

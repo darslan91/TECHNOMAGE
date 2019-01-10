@@ -20,6 +20,8 @@ public class VueSélectionMenuPrincipal extends TPanel {
 	private TBouton jbQuitter;
 
 	public VueSélectionMenuPrincipal(Vue vue) {
+		super(true);
+		
 		this.setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
 		c.insets = new Insets(5,5,5,5);

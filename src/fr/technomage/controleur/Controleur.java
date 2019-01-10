@@ -12,6 +12,5 @@ public class Controleur {
 		VueMenuPrincipal panel = new VueMenuPrincipal(vue);
 		vue.getContentPane().add(panel);
 		vue.setVisible(true);
-		
 	}
 }
