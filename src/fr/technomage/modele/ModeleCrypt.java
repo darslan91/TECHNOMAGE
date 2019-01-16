@@ -24,7 +24,7 @@ public class ModeleCrypt {
 	public static void encrypt(File inputFile) {
 		try {
 			String path = inputFile.getPath().substring(2, inputFile.getPath().length()-4) + ".tcmr";
-			String key = "F5D1ECBF43C94300A6FF6CC61A4824B9";
+			String key = "E4D1FGR7F4AFG684";
 			File outputFile = new File(path);
 			outputFile.getParentFile().mkdirs();
 			outputFile.createNewFile();
@@ -59,7 +59,7 @@ public class ModeleCrypt {
 	public static byte[] decrypt(File inputFile) {
 		byte[] outputBytes = null;
 		try {
-			String key = "F5D1ECBF43C94300A6FF6CC61A4824B9";
+			String key = "E4D1FGR7F4AFG684";
 			Key secretKey = new SecretKeySpec(key.getBytes(), "AES");
 			Cipher cipher = Cipher.getInstance("AES");
 			cipher.init(Cipher.DECRYPT_MODE, secretKey);

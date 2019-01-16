@@ -1,0 +1,14 @@
+<Arme>
+    <nom>Epée brisée</nom>
+    <valeur>5</valeur>
+    <description>
+        Une épée qui a subit le chatiment du temps.
+    </description>
+    <dégats>
+        <minimum>
+            <0>4</0>
+            <1>6</1>
+        </minimum>
+        <type>physique</type>
+    <dégats/>
+</Arme>
